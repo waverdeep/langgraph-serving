@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.v1.endpoints import chatbot
 
-app = FastAPI(title="langgraph-ai-server", version="1.0.0")
+app = FastAPI(title="langgraph-serving", version="1.0.0")
 app.include_router(chatbot.router, prefix="/note", tags=["posts"])
 app.add_middleware(
     CORSMiddleware,
@@ -16,7 +16,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to langgraph-ai-server"}
+    return {"message": "Welcome to langgraph-serving"}
 
 
 @app.get("/health")
