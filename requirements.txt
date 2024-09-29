@@ -6,6 +6,7 @@ uvicorn
 langfuse
 
 langchain
+langchain-core
 langchain-openai
 langchain-community
 langgraph
