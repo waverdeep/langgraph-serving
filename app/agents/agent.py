@@ -2,7 +2,7 @@ from typing import List
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 
-def create_agent(llm, tools: List, system_message: str):
+def create_agent_with_tools(llm, tools: List, system_message: str):
     prompt = ChatPromptTemplate(
         [
             (
